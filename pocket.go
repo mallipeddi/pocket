@@ -167,12 +167,12 @@ func (req *RetrieveRequest) OnlyState(state ItemState) *RetrieveRequest {
 }
 
 func (req *RetrieveRequest) Count(count int) *RetrieveRequest {
-	req.params["count"] = string(count)
+	req.params["count"] = strconv.Itoa(count)
 	return req
 }
 
 func (req *RetrieveRequest) Offset(off int) *RetrieveRequest {
-	req.params["offset"] = string(off)
+	req.params["offset"] = strconv.Itoa(off)
 	return req
 }
 
